@@ -16,7 +16,7 @@
     }
   },
   "postCreateCommand": "pipx install algokit",
-  "postStartCommand": "algokit localnet start",
+  "postStartCommand": "algokit localnet start && cd ./client && npm install",
   "remoteUser": "node",
   "customizations": {
     "vscode": {

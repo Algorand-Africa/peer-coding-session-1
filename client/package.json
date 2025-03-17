@@ -13,7 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "@algorandfoundation/algokit-utils": "^7.0.0",
+    "algosdk": ">=2.9.0 <3.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
