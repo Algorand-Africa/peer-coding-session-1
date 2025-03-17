@@ -16,7 +16,6 @@
   },
   "postCreateCommand": "mkdir -p ~/.config/algokit && pipx install algokit && sudo chown -R codespace:codespace ~/.config/algokit",
   "postStartCommand": "for i in {1..5}; do algokit localnet status > /dev/null 2>&1 && break || sleep 30; algokit localnet reset; cd ./client && npm install; done",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "remoteUser": "node",
   "customizations": {
     "vscode": {
