@@ -28,6 +28,9 @@ async function main() {
     //     defaultSigner: account.signer,
     // });
 
+    /**
+     * Create application
+     */
     // const response = await appFactory.send.create({
     //     method: 'createApplication',
     // });
@@ -42,6 +45,9 @@ async function main() {
 
     const suggestedParams = await client.client.algod.getTransactionParams().do();
 
+    /**
+     * Fund application
+     */
     // const fundingTxn = makePaymentTxnWithSuggestedParamsFromObject({
     //     amount: 200_000,
     //     from: account.addr,
@@ -56,6 +62,9 @@ async function main() {
     //     signer: account.signer,
     // });
 
+    /**
+     * Call createAsset
+     */
     // atomTransactionComposer.addMethodCall({
     //     method: appClient.getABIMethod('createAsset')!,
     //     methodArgs: [],
@@ -72,19 +81,25 @@ async function main() {
     const assetId = globalState.asset.value;
     console.log(globalState.asset.value)
 
-    const assetOptinTxn = makeAssetTransferTxnWithSuggestedParamsFromObject({
-        amount: 0,
-        from: account.addr,
-        to: account.addr,
-        assetIndex: Number(assetId),
-        suggestedParams,
-    });
+    /**
+     * Opt into asset
+     */
+    // const assetOptinTxn = makeAssetTransferTxnWithSuggestedParamsFromObject({
+    //     amount: 0,
+    //     from: account.addr,
+    //     to: account.addr,
+    //     assetIndex: Number(assetId),
+    //     suggestedParams,
+    // });
 
-    atomTransactionComposer.addTransaction({
-        txn: assetOptinTxn,
-        signer: account.signer,
-    });
+    // atomTransactionComposer.addTransaction({
+    //     txn: assetOptinTxn,
+    //     signer: account.signer,
+    // });
 
+    /**
+     * claim asset
+     */
     atomTransactionComposer.addMethodCall({
         method: appClient.getABIMethod('claimAsset')!,
         methodArgs: [],
