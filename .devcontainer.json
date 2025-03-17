@@ -1,6 +1,5 @@
 {
   "forwardPorts": [4001, 4002, 8980, 5173],
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "portsAttributes": {
     "4001": {
       "label": "algod"
@@ -16,14 +15,5 @@
     }
   },
   "postCreateCommand": "pipx install algokit",
-  "postStartCommand": "algokit localnet start && cd ./client && npm install",
-  "remoteUser": "node",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
-      ]
-    }
-  },
+  "postStartCommand": "algokit localnet start"
 }
