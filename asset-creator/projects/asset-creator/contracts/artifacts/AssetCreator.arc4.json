@@ -1,0 +1,29 @@
+{
+  "name": "AssetCreator",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createAsset",
+      "desc": "This creates the asset that can be claimed once by any address.",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "claimAsset",
+      "desc": "This method transfers and freezes one unit of the asset to the account\nthat calls the method",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
