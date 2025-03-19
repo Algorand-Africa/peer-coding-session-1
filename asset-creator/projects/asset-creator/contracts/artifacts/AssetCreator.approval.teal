@@ -74,7 +74,7 @@ createAsset:
 
 	// contracts/AssetCreator.algo.ts:16
 	// newAsset = sendAssetCreation({
-	//       configAssetName: 'ASC',
+	//       configAssetName: 'DAO Challenge 2',
 	//       configAssetTotal: 10000,
 	//       configAssetDecimals: 0,
 	//       configAssetFreeze: this.app.address,
@@ -85,8 +85,8 @@ createAsset:
 	itxn_field TypeEnum
 
 	// contracts/AssetCreator.algo.ts:17
-	// configAssetName: 'ASC'
-	pushbytes 0x415343 // "ASC"
+	// configAssetName: 'DAO Challenge 2'
+	pushbytes 0x44414f204368616c6c656e67652032 // "DAO Challenge 2"
 	itxn_field ConfigAssetName
 
 	// contracts/AssetCreator.algo.ts:18
@@ -150,7 +150,14 @@ claimAsset:
 	==
 	assert
 
-	// contracts/AssetCreator.algo.ts:34
+	// contracts/AssetCreator.algo.ts:33
+	// assert(this.txn.fee >= 6_000)
+	txn Fee
+	pushint 6_000
+	>=
+	assert
+
+	// contracts/AssetCreator.algo.ts:35
 	// sendAssetTransfer({
 	//       assetAmount: 1,
 	//       assetReceiver: this.txn.sender,
@@ -160,17 +167,17 @@ claimAsset:
 	pushint 4 // axfer
 	itxn_field TypeEnum
 
-	// contracts/AssetCreator.algo.ts:35
+	// contracts/AssetCreator.algo.ts:36
 	// assetAmount: 1
 	intc 1 // 1
 	itxn_field AssetAmount
 
-	// contracts/AssetCreator.algo.ts:36
+	// contracts/AssetCreator.algo.ts:37
 	// assetReceiver: this.txn.sender
 	txn Sender
 	itxn_field AssetReceiver
 
-	// contracts/AssetCreator.algo.ts:37
+	// contracts/AssetCreator.algo.ts:38
 	// xferAsset: this.asset.value
 	bytec 0 //  "asset"
 	app_global_get
@@ -183,7 +190,7 @@ claimAsset:
 	// Submit inner transaction
 	itxn_submit
 
-	// contracts/AssetCreator.algo.ts:40
+	// contracts/AssetCreator.algo.ts:41
 	// sendAssetFreeze({
 	//       freezeAsset: this.asset.value,
 	//       freezeAssetFrozen: true,
@@ -193,18 +200,18 @@ claimAsset:
 	pushint 5 // afrz
 	itxn_field TypeEnum
 
-	// contracts/AssetCreator.algo.ts:41
+	// contracts/AssetCreator.algo.ts:42
 	// freezeAsset: this.asset.value
 	bytec 0 //  "asset"
 	app_global_get
 	itxn_field FreezeAsset
 
-	// contracts/AssetCreator.algo.ts:42
+	// contracts/AssetCreator.algo.ts:43
 	// freezeAssetFrozen: true
 	intc 1 // 1
 	itxn_field FreezeAssetFrozen
 
-	// contracts/AssetCreator.algo.ts:43
+	// contracts/AssetCreator.algo.ts:44
 	// freezeAssetAccount: this.txn.sender
 	txn Sender
 	itxn_field FreezeAssetAccount

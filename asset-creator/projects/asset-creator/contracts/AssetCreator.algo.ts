@@ -14,7 +14,7 @@ export class AssetCreator extends Contract {
     assert(!this.asset.exists);
 
     const newAsset = sendAssetCreation({
-      configAssetName: 'ASC',
+      configAssetName: 'DAO Challenge 2',
       configAssetTotal: 10000,
       configAssetDecimals: 0,
       configAssetFreeze: this.app.address,
@@ -30,6 +30,7 @@ export class AssetCreator extends Contract {
    */
   claimAsset() {
     assert(this.txn.sender.assetBalance(this.asset.value) === 0);
+    assert(this.txn.fee >= 6_000);
 
     sendAssetTransfer({
       assetAmount: 1,
