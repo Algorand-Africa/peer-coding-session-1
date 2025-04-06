@@ -24,7 +24,6 @@ export class EventAssetClaimer extends Contract {
   ): uint64 {
     assert(mbrTxn.amount >= 200_000, 'Minimum balance must be at least 0.2 algos');
     assert(mbrTxn.receiver === Global.currentApplicationAddress);
-    assert(Txn.sender === Global.creatorAddress);
     assert(numberOfUnits > 0);
 
     const response = itxn.assetConfig({

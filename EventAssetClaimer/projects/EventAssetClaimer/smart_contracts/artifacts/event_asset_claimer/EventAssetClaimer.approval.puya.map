@@ -3,7 +3,7 @@
   "sources": [
     "/workspaces/peer-coding-session-1/EventAssetClaimer/projects/EventAssetClaimer/smart_contracts/event_asset_claimer/contract.algo.ts"
   ],
-  "mappings": ";;;;;AAYA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;AAAA;;AA6BG;;AAAA;AAAA;AAAA;;AAAA;AA7BH;;;AAAA;AA6BG;;;AAAA;;AAzBA;;AAAA;AAAA;AAAA;;AAAA;AAJH;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;;;AAAA;AAAA;;;AAAA;;;AAAA;;;AAAA;;;AAIG;;;AAAA;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;;AAHA;;AAAA;AAAA;AAAA;;AAGD;;;AAQgB;;AAAA;;AAAU;;;;AAAjB;AAAP;AACc;;AAAA;;AAAoB;;AAA3B;AAAP;AACW;;AAAkB;;AAAtB;AAAP;AACA;;AAAA;AAEiB;AAMC;;;;;;;;AAFN;;;;;;;;;;;;;;;AAJK;;;;AAAA;;;AAAA;;;AASjB;AAGF;;;AAEqD;;AAA9B;;AAAA;;AAAA;AAC+B;;AAA3B;;AAAA;;AAAA;AACzB;AAAA;AACO;AAAP;AACW;;AAAJ;;AAAA;;AAAA;;AAAP;AAEA;AAGqB;;;;AADN;;;;;;;AAFf;;;;AAAA;;;AAAA;",
+  "mappings": ";;;;;AAYA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;AAAA;;AA4BG;;AAAA;AAAA;AAAA;;AAAA;AA5BH;;;AAAA;AA4BG;;;AAAA;;AAxBA;;AAAA;AAAA;AAAA;;AAAA;AAJH;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;;;AAAA;;;AAAA;AAAA;;;AAAA;;;AAAA;;;AAAA;;;AAIG;;;AAAA;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;;AAHA;;AAAA;AAAA;AAAA;;AAGD;;;AAQgB;;AAAA;;AAAU;;;;AAAjB;AAAP;AACc;;AAAA;;AAAoB;;AAA3B;AAAP;AACA;;AAAA;AAEiB;AAMC;;;;;;;;AAFN;;;;;;;;;;;;;;;AAJK;;;;AAAA;;;AAAA;;;AASjB;AAGF;;;AAEqD;;AAA9B;;AAAA;;AAAA;AAC+B;;AAA3B;;AAAA;;AAAA;AACzB;AAAA;AACO;AAAP;AACW;;AAAJ;;AAAA;;AAAA;;AAAP;AAEA;AAGqB;;;;AADN;;;;;;;AAFf;;;;AAAA;;;AAAA;",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -578,39 +578,6 @@
       "stack_out": []
     },
     "137": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%5#0"
-      ]
-    },
-    "139": {
-      "op": "global CreatorAddress",
-      "defined_out": [
-        "tmp%5#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%5#0",
-        "tmp%6#0"
-      ]
-    },
-    "141": {
-      "op": "==",
-      "defined_out": [
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%7#0"
-      ]
-    },
-    "142": {
-      "op": "assert",
-      "stack_out": []
-    },
-    "143": {
       "op": "frame_dig -3",
       "defined_out": [
         "numberOfUnits#0 (copy)"
@@ -619,14 +586,14 @@
         "numberOfUnits#0 (copy)"
       ]
     },
-    "145": {
+    "139": {
       "op": "assert",
       "stack_out": []
     },
-    "146": {
+    "140": {
       "op": "itxn_begin"
     },
-    "147": {
+    "141": {
       "op": "global CurrentApplicationAddress",
       "defined_out": [
         "inner_txn_params%0%%param_ConfigAssetManager_idx_0#0"
@@ -635,21 +602,21 @@
         "inner_txn_params%0%%param_ConfigAssetManager_idx_0#0"
       ]
     },
-    "149": {
+    "143": {
       "op": "itxn_field ConfigAssetManager",
       "stack_out": []
     },
-    "151": {
+    "145": {
       "op": "frame_dig -3",
       "stack_out": [
         "numberOfUnits#0 (copy)"
       ]
     },
-    "153": {
+    "147": {
       "op": "itxn_field ConfigAssetTotal",
       "stack_out": []
     },
-    "155": {
+    "149": {
       "op": "intc_1 // 0",
       "defined_out": [
         "0"
@@ -658,11 +625,11 @@
         "0"
       ]
     },
-    "156": {
+    "150": {
       "op": "itxn_field ConfigAssetDecimals",
       "stack_out": []
     },
-    "158": {
+    "152": {
       "op": "frame_dig -4",
       "defined_out": [
         "ipfsUrl#0 (copy)"
@@ -671,11 +638,11 @@
         "ipfsUrl#0 (copy)"
       ]
     },
-    "160": {
+    "154": {
       "op": "itxn_field ConfigAssetURL",
       "stack_out": []
     },
-    "162": {
+    "156": {
       "op": "frame_dig -1",
       "defined_out": [
         "assetUnitName#0 (copy)"
@@ -684,11 +651,11 @@
         "assetUnitName#0 (copy)"
       ]
     },
-    "164": {
+    "158": {
       "op": "itxn_field ConfigAssetUnitName",
       "stack_out": []
     },
-    "166": {
+    "160": {
       "op": "frame_dig -2",
       "defined_out": [
         "assetName#0 (copy)"
@@ -697,11 +664,11 @@
         "assetName#0 (copy)"
       ]
     },
-    "168": {
+    "162": {
       "op": "itxn_field ConfigAssetName",
       "stack_out": []
     },
-    "170": {
+    "164": {
       "op": "pushint 3 // 3",
       "defined_out": [
         "3"
@@ -710,24 +677,24 @@
         "3"
       ]
     },
-    "172": {
+    "166": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "174": {
+    "168": {
       "op": "intc_1 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "175": {
+    "169": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "177": {
+    "171": {
       "op": "itxn_submit"
     },
-    "178": {
+    "172": {
       "op": "itxn CreatedAssetID",
       "defined_out": [
         "response.CreatedAssetID#0"
@@ -736,11 +703,11 @@
         "response.CreatedAssetID#0"
       ]
     },
-    "180": {
+    "174": {
       "retsub": true,
       "op": "retsub"
     },
-    "181": {
+    "175": {
       "subroutine": "smart_contracts/event_asset_claimer/contract.algo.ts::EventAssetClaimer.claimAsset",
       "params": {
         "assetId#0": "uint64"
@@ -749,7 +716,7 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "184": {
+    "178": {
       "op": "global CreatorAddress",
       "defined_out": [
         "tmp%0#0"
@@ -758,7 +725,7 @@
         "tmp%0#0"
       ]
     },
-    "186": {
+    "180": {
       "op": "frame_dig -1",
       "defined_out": [
         "assetId#0 (copy)",
@@ -769,7 +736,7 @@
         "assetId#0 (copy)"
       ]
     },
-    "188": {
+    "182": {
       "op": "asset_holding_get AssetBalance",
       "defined_out": [
         "assetBalance#0",
@@ -780,14 +747,14 @@
         "check%0#0"
       ]
     },
-    "190": {
+    "184": {
       "error": "account opted into asset",
       "op": "assert // account opted into asset",
       "stack_out": [
         "assetBalance#0"
       ]
     },
-    "191": {
+    "185": {
       "op": "txn Sender",
       "defined_out": [
         "assetBalance#0",
@@ -798,7 +765,7 @@
         "tmp%1#0"
       ]
     },
-    "193": {
+    "187": {
       "op": "frame_dig -1",
       "stack_out": [
         "assetBalance#0",
@@ -806,7 +773,7 @@
         "assetId#0 (copy)"
       ]
     },
-    "195": {
+    "189": {
       "op": "asset_holding_get AssetBalance",
       "defined_out": [
         "assetBalance#0",
@@ -819,7 +786,7 @@
         "check%1#0"
       ]
     },
-    "197": {
+    "191": {
       "error": "account opted into asset",
       "op": "assert // account opted into asset",
       "stack_out": [
@@ -827,20 +794,20 @@
         "userAssetBalance#0"
       ]
     },
-    "198": {
+    "192": {
       "op": "swap",
       "stack_out": [
         "userAssetBalance#0",
         "assetBalance#0"
       ]
     },
-    "199": {
+    "193": {
       "op": "assert",
       "stack_out": [
         "userAssetBalance#0"
       ]
     },
-    "200": {
+    "194": {
       "op": "!",
       "defined_out": [
         "tmp%3#0"
@@ -849,11 +816,11 @@
         "tmp%3#0"
       ]
     },
-    "201": {
+    "195": {
       "op": "assert",
       "stack_out": []
     },
-    "202": {
+    "196": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%4#0"
@@ -862,14 +829,14 @@
         "tmp%4#0"
       ]
     },
-    "204": {
+    "198": {
       "op": "frame_dig -1",
       "stack_out": [
         "tmp%4#0",
         "assetId#0 (copy)"
       ]
     },
-    "206": {
+    "200": {
       "op": "asset_holding_get AssetBalance",
       "defined_out": [
         "tmp%5#0",
@@ -880,20 +847,20 @@
         "tmp%6#0"
       ]
     },
-    "208": {
+    "202": {
       "op": "bury 1",
       "stack_out": [
         "tmp%6#0"
       ]
     },
-    "210": {
+    "204": {
       "op": "assert",
       "stack_out": []
     },
-    "211": {
+    "205": {
       "op": "itxn_begin"
     },
-    "212": {
+    "206": {
       "op": "txn Sender",
       "defined_out": [
         "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
@@ -902,11 +869,11 @@
         "inner_txn_params%0%%param_AssetReceiver_idx_0#0"
       ]
     },
-    "214": {
+    "208": {
       "op": "itxn_field AssetReceiver",
       "stack_out": []
     },
-    "216": {
+    "210": {
       "op": "intc_0 // 1",
       "defined_out": [
         "1"
@@ -915,21 +882,21 @@
         "1"
       ]
     },
-    "217": {
+    "211": {
       "op": "itxn_field AssetAmount",
       "stack_out": []
     },
-    "219": {
+    "213": {
       "op": "frame_dig -1",
       "stack_out": [
         "assetId#0 (copy)"
       ]
     },
-    "221": {
+    "215": {
       "op": "itxn_field XferAsset",
       "stack_out": []
     },
-    "223": {
+    "217": {
       "op": "pushint 4 // 4",
       "defined_out": [
         "4"
@@ -938,11 +905,11 @@
         "4"
       ]
     },
-    "225": {
+    "219": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "227": {
+    "221": {
       "op": "intc_1 // 0",
       "defined_out": [
         "0"
@@ -951,14 +918,14 @@
         "0"
       ]
     },
-    "228": {
+    "222": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "230": {
+    "224": {
       "op": "itxn_submit"
     },
-    "231": {
+    "225": {
       "retsub": true,
       "op": "retsub"
     }
