@@ -40,7 +40,7 @@ export class EventAssetClaimer extends Contract {
 
   @abimethod()
   public claimAsset(assetId: uint64): void {
-    const assetBalance = Asset(assetId).balance(Global.creatorAddress);
+    const assetBalance = Asset(assetId).balance(Global.currentApplicationAddress);
     const userAssetBalance = Asset(assetId).balance(Txn.sender);
     assert(assetBalance > 0);
     assert(userAssetBalance === 0);

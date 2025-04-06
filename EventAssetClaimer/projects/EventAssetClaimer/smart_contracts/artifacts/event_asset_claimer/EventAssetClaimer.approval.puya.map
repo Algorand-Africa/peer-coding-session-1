@@ -717,7 +717,7 @@
       "op": "proto 1 0"
     },
     "178": {
-      "op": "global CreatorAddress",
+      "op": "global CurrentApplicationAddress",
       "defined_out": [
         "tmp%0#0"
       ],

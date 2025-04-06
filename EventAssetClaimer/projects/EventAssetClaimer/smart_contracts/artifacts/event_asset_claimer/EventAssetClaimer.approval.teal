@@ -166,8 +166,8 @@ claimAsset:
     // public claimAsset(assetId: uint64): void {
     proto 1 0
     // smart_contracts/event_asset_claimer/contract.algo.ts:43
-    // const assetBalance = Asset(assetId).balance(Global.creatorAddress);
-    global CreatorAddress
+    // const assetBalance = Asset(assetId).balance(Global.currentApplicationAddress);
+    global CurrentApplicationAddress
     frame_dig -1
     asset_holding_get AssetBalance
     assert // account opted into asset
